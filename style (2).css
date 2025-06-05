@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #0ff;
+  font-family: 'Courier New', monospace;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 30px;
+  background: #111;
+  border-bottom: 2px solid #0ff;
+  font-size: 18px;
+}
+
+#game-area {
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+  background: #1a1a1a;
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  grid-template-rows: repeat(12, 50px);
+  gap: 1px;
+  border: 3px solid #0ff;
+  position: relative;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background: #2a2a2a;
+  position: relative;
+  cursor: pointer;
+}
+
+.cell.path {
+  background: #444;
+  cursor: default;
+}
+
+.enemy {
+  width: 20px;
+  height: 20px;
+  background: #f00;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transition: top 0.4s linear, left 0.4s linear;
+  box-shadow: 0 0 8px #f00;
+}
+
+.tower {
+  width: 40px;
+  height: 40px;
+  background: #00f;
+  border-radius: 6px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: 0 0 10px #00f;
+  transition: box-shadow 0.3s ease;
+}
+
+.tower.shooting {
+  box-shadow: 0 0 20px 5px #0ff;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background: #0ff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#mensagem {
+  text-align: center;
+  font-size: 28px;
+  color: #f00;
+  margin-top: 10px;
+  height: 36px;
+}
+
+#tipos-torre {
+  width: 600px;
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #0ff;
+}
+
+#tipos-torre button {
+  background: #222;
+  color: #0ff;
+  border: 2px solid #0ff;
+  padding: 8px 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+#tipos-torre button:hover {
+  background: #0ff;
+  color: #000;
+}
+
+.range-highlight {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px dashed #0ff;
+  pointer-events: none;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Defesa Cibernética</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="hud">
+    <div>Vida: <span id="vida">5</span></div>
+    <div>Dinheiro: $<span id="dinheiro">100</span></div>
+    <div>Pontos: <span id="pontos">0</span></div>
+    <div>Onda: <span id="onda">1</span></div>
+  </div>
+
+  <div id="game-area"></div>
+
+  <div id="mensagem"></div>
+
+  <div id="tipos-torre">
+    <h3>Escolha Torre para Construir</h3>
+    <button data-tipo="1">Laser ($30) - Alcance 3, Dano 10</button>
+    <button data-tipo="2">Plasma ($50) - Alcance 4, Dano 15</button>
+    <button data-tipo="3">Ion ($80) - Alcance 5, Dano 25</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
